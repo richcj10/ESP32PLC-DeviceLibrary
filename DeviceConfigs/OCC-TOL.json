@@ -1,0 +1,30 @@
+{
+  "name": "OCC-TOL",
+  "typeId": 2,
+  "swVersion": 4,
+  "groups": [
+    {
+      "name": "Occupancy",
+      "fc": 4,
+      "startReg": 2,
+      "count": 7,
+      "pollMs": 1500,
+      "scale": 100,
+      "units": "",
+      "regs": ["VIN", "Temp1", "Temp2", "Humid1", "Humid2", "Pres", "Lux"],
+      "mqttEnable": true,
+      "mqttTopic": "remote/OCC-Desk",
+      "writes": [
+        {
+          "name": "LED",
+          "fc": 16,
+          "startReg": 0,
+          "count": 3,
+          "regs": [18, "R", "GB"],
+          "defaults": [18, 0, 0],
+          "mqttTopic": "/remote/OCC-Desk/led/set"
+        }
+      ]
+    }
+  ]
+}

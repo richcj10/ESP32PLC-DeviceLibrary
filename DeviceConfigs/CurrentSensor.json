@@ -1,0 +1,20 @@
+{
+  "name": "CurrentSensor",
+  "typeId": 5,
+  "swVersion": 2,
+  "groups": [
+    {
+      "name": "Current",
+      "fc": 4,
+      "startReg": 0,
+      "count": 6,
+      "pollMs": 1000,
+      "scale": 100,
+      "units": "A",
+      "regs": ["Version", "DevType", "VIN", "CS1", "CS2", "CS3"],
+      "mqttEnable": true,
+      "mqttTopic": "remote/CS",
+      "writes": []
+    }
+  ]
+}
