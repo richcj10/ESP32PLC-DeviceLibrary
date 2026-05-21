@@ -51,6 +51,116 @@
       ]
     },
     {
+      "name": "ESP32-LTE",
+      "typeId": 3,
+      "swVersion": 2,
+      "groups": [
+        {
+          "name": "Identity",
+          "fc": 4,
+          "startReg": 0,
+          "count": 2,
+          "pollMs": 30000,
+          "scale": 1,
+          "units": "",
+          "regs": ["Version", "DevType"],
+          "mqttEnable": false,
+          "mqttTopic": "remote/LTE",
+          "writes": []
+        },
+        {
+          "name": "Battery",
+          "fc": 4,
+          "startReg": 2,
+          "count": 4,
+          "pollMs": 30000,
+          "scale": 100,
+          "units": "",
+          "regs": ["SoC", "Voltage", "Rate", "Mode"],
+          "mqttEnable": true,
+          "mqttTopic": "remote/LTE",
+          "writes": []
+        },
+        {
+          "name": "Cell",
+          "fc": 4,
+          "startReg": 6,
+          "count": 3,
+          "pollMs": 30000,
+          "scale": 1,
+          "units": "",
+          "regs": ["RSSI", "Status", "WiFiRSSI"],
+          "mqttEnable": true,
+          "mqttTopic": "remote/LTE",
+          "writes": [
+            {
+              "name": "CellEnable",
+              "fc": 5,
+              "startReg": 0,
+              "count": 1,
+              "regs": ["Enable"],
+              "defaults": [1],
+              "mqttTopic": "remote/LTE/cell/enable"
+            },
+            {
+              "name": "GPSEnable",
+              "fc": 5,
+              "startReg": 1,
+              "count": 1,
+              "regs": ["Enable"],
+              "defaults": [0],
+              "mqttTopic": "remote/LTE/gps/enable"
+            }
+          ]
+        },
+        {
+          "name": "GPS",
+          "fc": 4,
+          "startReg": 9,
+          "count": 6,
+          "pollMs": 30000,
+          "scale": 1,
+          "units": "",
+          "regs": ["Fix", "LatDeg", "LatDec", "LonDeg", "LonDec", "Speed"],
+          "mqttEnable": true,
+          "mqttTopic": "remote/LTE",
+          "writes": []
+        },
+        {
+          "name": "Message",
+          "fc": 3,
+          "startReg": 1,
+          "count": 20,
+          "pollMs": 0,
+          "scale": 1,
+          "units": "",
+          "regs": ["Msg0","Msg1","Msg2","Msg3","Msg4","Msg5","Msg6","Msg7","Msg8","Msg9","Msg10","Msg11","Msg12","Msg13","Msg14","Msg15","Msg16","Msg17","Msg18","Msg19"],
+          "mqttEnable": false,
+          "mqttTopic": "remote/LTE",
+          "writes": [
+            {
+              "name": "SendMessage",
+              "fc": 16,
+              "startReg": 1,
+              "count": 20,
+              "regs": ["Msg0","Msg1","Msg2","Msg3","Msg4","Msg5","Msg6","Msg7","Msg8","Msg9","Msg10","Msg11","Msg12","Msg13","Msg14","Msg15","Msg16","Msg17","Msg18","Msg19"],
+              "defaults": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+              "mqttTopic": "remote/LTE/message/send"
+            },
+            {
+              "name": "TriggerSend",
+              "fc": 5,
+              "startReg": 2,
+              "count": 1,
+              "regs": ["Send"],
+              "defaults": [1],
+              "mqttTopic": "remote/LTE/message/trigger"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "Weather Station",
       "typeId": 13,
       "swVersion": 3,
