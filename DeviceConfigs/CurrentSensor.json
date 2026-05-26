@@ -4,14 +4,27 @@
   "swVersion": 2,
   "groups": [
     {
-      "name": "Current",
+      "name": "Device",
       "fc": 4,
       "startReg": 0,
-      "count": 6,
+      "count": 2,
+      "pollMs": 30000,
+      "scale": 1,
+      "units": "",
+      "regs": ["Version", "DevType"],
+      "mqttEnable": false,
+      "mqttTopic": "remote/CS/diag",
+      "writes": []
+    },
+    {
+      "name": "Current",
+      "fc": 4,
+      "startReg": 2,
+      "count": 4,
       "pollMs": 1000,
       "scale": 100,
-      "units": "A",
-      "regs": ["Version", "DevType", "VIN", "CS1", "CS2", "CS3"],
+      "units": ["V", "A", "A", "A"],
+      "regs": ["VIN", "CS1", "CS2", "CS3"],
       "mqttEnable": true,
       "mqttTopic": "remote/CS",
       "writes": []
