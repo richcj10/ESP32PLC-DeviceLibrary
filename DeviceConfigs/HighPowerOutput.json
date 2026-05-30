@@ -72,7 +72,7 @@
       "count": 10,
       "pollMs": 500,
       "scale": 100,
-      "units": "V",
+      "units": "A",
       "regs": ["Out1IS", "Out2IS", "Out3IS", "Out4IS", "Out5IS",
                "Out6IS", "Out7IS", "Out8IS", "Out9IS", "Out10IS"],
       "mqttEnable": true,
