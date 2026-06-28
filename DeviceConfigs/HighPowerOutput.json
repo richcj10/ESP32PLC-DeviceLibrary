@@ -30,22 +30,9 @@
       "writes": []
     },
     {
-      "name": "Sense",
-      "fc": 4,
-      "startReg": 4,
-      "count": 5,
-      "pollMs": 1000,
-      "scale": 100,
-      "units": "V",
-      "regs": ["SenseU6", "SenseU7", "SenseU8", "SenseU3", "SenseU4"],
-      "mqttEnable": false,
-      "mqttTopic": "remote/HPO/sense",
-      "writes": []
-    },
-    {
       "name": "Mode",
       "fc": 4,
-      "startReg": 9,
+      "startReg": 4,
       "count": 1,
       "pollMs": 2000,
       "scale": 1,
@@ -68,7 +55,7 @@
     {
       "name": "OutputCurrent",
       "fc": 4,
-      "startReg": 10,
+      "startReg": 5,
       "count": 10,
       "pollMs": 500,
       "scale": 100,
@@ -119,17 +106,17 @@
       "mqttEnable": true,
       "mqttTopic": "remote/HPO/fire",
       "writes": [
-        { "name": "FireOut1",  "fc": 5, "startReg": 2,  "count": 1, "regs": ["Enable"], "defaults": [0], "mqttTopic": "remote/HPO/fire/out1"  },
-        { "name": "FireOut2",  "fc": 5, "startReg": 3,  "count": 1, "regs": ["Enable"], "defaults": [0], "mqttTopic": "remote/HPO/fire/out2"  },
-        { "name": "FireOut3",  "fc": 5, "startReg": 4,  "count": 1, "regs": ["Enable"], "defaults": [0], "mqttTopic": "remote/HPO/fire/out3"  },
-        { "name": "FireOut4",  "fc": 5, "startReg": 5,  "count": 1, "regs": ["Enable"], "defaults": [0], "mqttTopic": "remote/HPO/fire/out4"  },
-        { "name": "FireOut5",  "fc": 5, "startReg": 6,  "count": 1, "regs": ["Enable"], "defaults": [0], "mqttTopic": "remote/HPO/fire/out5"  },
-        { "name": "FireOut6",  "fc": 5, "startReg": 7,  "count": 1, "regs": ["Enable"], "defaults": [0], "mqttTopic": "remote/HPO/fire/out6"  },
-        { "name": "FireOut7",  "fc": 5, "startReg": 8,  "count": 1, "regs": ["Enable"], "defaults": [0], "mqttTopic": "remote/HPO/fire/out7"  },
-        { "name": "FireOut8",  "fc": 5, "startReg": 9,  "count": 1, "regs": ["Enable"], "defaults": [0], "mqttTopic": "remote/HPO/fire/out8"  },
-        { "name": "FireOut9",  "fc": 5, "startReg": 10, "count": 1, "regs": ["Enable"], "defaults": [0], "mqttTopic": "remote/HPO/fire/out9"  },
-        { "name": "FireOut10", "fc": 5, "startReg": 11, "count": 1, "regs": ["Enable"], "defaults": [0], "mqttTopic": "remote/HPO/fire/out10" },
-        { "name": "ScanEnable","fc": 5, "startReg": 0,  "count": 1, "regs": ["Enable"], "defaults": [1], "mqttTopic": "remote/HPO/scan/enable"}
+        { "name": "FireOut1",   "fc": 5, "startReg": 2,  "count": 1, "regs": ["Enable"], "defaults": [0], "mqttTopic": "remote/HPO/fire/out1"   },
+        { "name": "FireOut2",   "fc": 5, "startReg": 3,  "count": 1, "regs": ["Enable"], "defaults": [0], "mqttTopic": "remote/HPO/fire/out2"   },
+        { "name": "FireOut3",   "fc": 5, "startReg": 4,  "count": 1, "regs": ["Enable"], "defaults": [0], "mqttTopic": "remote/HPO/fire/out3"   },
+        { "name": "FireOut4",   "fc": 5, "startReg": 5,  "count": 1, "regs": ["Enable"], "defaults": [0], "mqttTopic": "remote/HPO/fire/out4"   },
+        { "name": "FireOut5",   "fc": 5, "startReg": 6,  "count": 1, "regs": ["Enable"], "defaults": [0], "mqttTopic": "remote/HPO/fire/out5"   },
+        { "name": "FireOut6",   "fc": 5, "startReg": 7,  "count": 1, "regs": ["Enable"], "defaults": [0], "mqttTopic": "remote/HPO/fire/out6"   },
+        { "name": "FireOut7",   "fc": 5, "startReg": 8,  "count": 1, "regs": ["Enable"], "defaults": [0], "mqttTopic": "remote/HPO/fire/out7"   },
+        { "name": "FireOut8",   "fc": 5, "startReg": 9,  "count": 1, "regs": ["Enable"], "defaults": [0], "mqttTopic": "remote/HPO/fire/out8"   },
+        { "name": "FireOut9",   "fc": 5, "startReg": 10, "count": 1, "regs": ["Enable"], "defaults": [0], "mqttTopic": "remote/HPO/fire/out9"   },
+        { "name": "FireOut10",  "fc": 5, "startReg": 11, "count": 1, "regs": ["Enable"], "defaults": [0], "mqttTopic": "remote/HPO/fire/out10"  },
+        { "name": "ScanEnable", "fc": 5, "startReg": 0,  "count": 1, "regs": ["Enable"], "defaults": [1], "mqttTopic": "remote/HPO/scan/enable" }
       ]
     }
   ]
